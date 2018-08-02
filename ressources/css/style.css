@@ -1,0 +1,216 @@
+@charset "UTF-8";
+body {
+    background: #ecf0f1;
+    padding: 80px 0 0 0;
+}
+
+body,
+input,
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #16a085;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 15px;
+}
+
+header input {
+    width: 100%;
+    height: 50px;
+    float: left;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    background: #1abc9c;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    padding: 0 60px 0 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+header input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-moz-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-moz-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    background: #fff;
+    border-radius: 25px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+header button i {
+    color: #16a085;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+ul.todos {  
+    width: 100%;
+    float: left;    
+}
+
+ul.todos li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #444;
+    line-height: 22px;
+    width: 100%;
+    /* min-width: 150px; */
+    min-height: 50px;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+}
+/* 
+Remove the margin from the last child
+ */
+ul.todos li:last-of-type {
+    margin: 0;
+}
+
+ul.todos li .buttons {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+ul.todos li .buttons button {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    position: relative;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+ul.todos li .buttons button:last-of-type:before {
+    content: '';
+    width: 2px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background:#ecf0f1;
+}
+
+ul.todos li .buttons button i {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    cursor: pointer;
+    transition: color .2s ease;    
+}
+
+ul.todos li .buttons button.remove i {
+    color: #ecf0f1;
+}
+
+ul.todos li .buttons button.remove:hover i {
+    color: #e74c3c;
+}
+
+ul.todos li .buttons button.complete i::before {
+    transition: color 0.4s ease; 
+}
+
+ul.todos li .buttons button.complete i::before {
+    color: #1abc9c;
+    content:"check_circle_outline";
+}
+
+ul.todos li .buttons button.complete:hover i::before {
+    content:"check_circle";
+    color: #16a085;
+}
+
+ul.todos#completed li .buttons button.complete i::before {
+    content:"check_circle";
+    color: #16a085;
+}
+
+ul.todos#completed:not(:empty) {
+    position: relative;
+    padding: 60px 0 0 0;
+}
+
+ul.todos#completed:not(:empty):before {
+    content: '';
+    width: 150px;
+    height: 1px;
+    background: #bdc3c7;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+}

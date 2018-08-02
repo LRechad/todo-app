@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Todo List app</title>
+
+        <!-- Roboto font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+        <!-- Material icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="ressources/css/reset.min.css">
+        <link rel="stylesheet" href="ressources/css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <input id="input-item" type="text" placeholder="Enter an activity ...">
+            <button id="add-item">
+                <i class="material-icons md-24">add
+                </i>
+            </button>
+        </header>
+
+        <div class="container">
+            <ul class="todos" id="todo"></ul>
+
+            <ul class="todos" id="completed"></ul>
+        </div>
+
+        <!-- JS files -->
+        <script src="ressources/js/main.js"></script>
+    </body>
+
+</html>
