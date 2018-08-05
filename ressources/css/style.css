@@ -172,6 +172,10 @@ ul.todos li .buttons button i {
     transition: color .2s ease;    
 }
 
+ul.todos li .buttons button.remove i::before {
+    content: "delete";
+}
+
 ul.todos li .buttons button.remove i {
     color: #ecf0f1;
 }
@@ -199,12 +203,12 @@ ul.todos#completed li .buttons button.complete i::before {
     color: #16a085;
 }
 
-ul.todos#completed:not(:empty) {
+ul.todos#completed {
     position: relative;
     padding: 60px 0 0 0;
 }
 
-ul.todos#completed:not(:empty):before {
+ul.todos#completed:before {
     content: '';
     width: 150px;
     height: 1px;
@@ -213,4 +217,22 @@ ul.todos#completed:not(:empty):before {
     top: 30px;
     left: 50%;
     margin: 0 0 0 -75px;
+}
+
+ul.todos#todo:empty:after {
+    content: 'You have nothing to-do!';
+    margin: 15px 0 0 0;
+}
+
+ul.todos#completed:empty:after {
+    content: 'You have yet to complete any tasks.';
+}
+
+ul.todos#todo:after,
+ul.todos#completed:after {
+    width: 100%;
+    display:block;
+    text-align: center;
+    font-size: 13px;
+    color: #aaaaaa;
 }
